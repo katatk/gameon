@@ -13,29 +13,33 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_sidebar( 'footerfull' ); ?>
 
+
 <div class="wrapper" id="wrapper-footer">
+	<footer class="site-footer" role="contentinfo">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
 		<div class="row">
+					<div class="col col-md-6">
 
-			<div class="col-md-12">
-
-				<footer class="site-footer" id="colophon">
-
-					<div class="site-info">
-
-						&copy; Copyright 2018 Game On
-
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
+						<span>&copy; Copyright 2018 Game On</span>
 
 			</div><!--col end -->
+
+			<div class="col col-md-6 text-right">
+
+
+				<span>Web Design by <a href="https://www.digitalstream.co.nz/" target="_blank">Digital Stream</a></span>
+
+
+			</div><!--col end -->
+
+
 
 		</div><!-- row end -->
 
 	</div><!-- container end -->
+	</footer><!-- #colophon -->
 
 </div><!-- wrapper end -->
 
