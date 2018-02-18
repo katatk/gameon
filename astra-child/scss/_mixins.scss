@@ -1,0 +1,6 @@
+@mixin btn-outline($color) {
+  color: $color;
+  border: 2px solid $color;
+  background: transparent;
+  font-family: 'Fjalla One', sans-serif;
+}

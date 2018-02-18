@@ -1,0 +1,62 @@
+// headings
+// .elementor-widget-heading h1.elementor-heading-title {
+//   color: white;
+// }
+//
+// .elementor-widget-heading h2.elementor-heading-title {
+//   color: $yellow;
+// }
+//
+// .elementor-widget-heading h1.elementor-heading-title,
+// .elementor-widget-heading h2.elementor-heading-title {
+//   font-family: 'Londrina Solid', sans-serif;
+//   text-transform: uppercase;
+// }
+//
+// .elementor-widget-heading h3.elementor-heading-title {
+//   font-family: 'Press Start 2P', sans-serif;
+//   text-transform: uppercase;
+//   color: white;
+// }
+//
+// .purple .elementor-widget-heading {
+//   h3.elementor-heading-title {
+//     color: $purple;
+//   }
+// }
+//
+// .orange .elementor-widget-heading {
+//   h3.elementor-heading-title {
+//     color: $orange;
+//   }
+// }
+//
+// .yellow .elementor-widget-heading {
+//   h3.elementor-heading-title {
+//     color: $yellow;
+//   }
+// }
+// // buttons
+//
+// .elementor-widget-button .elementor-button,
+// .elementor-widget-button a.elementor-button {
+//   @extend .btn;
+// }
+// underline for menu items
+
+.e--pointer-double-line .elementor-item:after,
+.e--pointer-double-line .elementor-item:before,
+.e--pointer-overline .elementor-item:after,
+.e--pointer-overline .elementor-item:before,
+.e--pointer-underline .elementor-item:after,
+.e--pointer-underline .elementor-item:before {
+  background-color: $yellow;
+}
+// buttons
+
+.elementor-button-wrapper .elementor-button {
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  @include btn-outline($yellow);
+}
