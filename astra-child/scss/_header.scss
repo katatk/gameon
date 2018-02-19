@@ -8,3 +8,20 @@
 .top-bar .elementor-button-text {
   font-family: "Roboto Condensed", sans-serif;
 }
+// page title area
+
+.page-heading-container {
+  background-color: $purple-dark;
+  /* fallback */
+  background-image: linear-gradient(135deg, $purple-dark 0, $purple-dark 50%, $purple 50%, $purple 100%);
+
+  h1.entry-title,
+  h1.press-elements-title {
+    margin-bottom: 0.2rem;
+    margin-top: 7rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

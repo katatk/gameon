@@ -1,47 +1,3 @@
-// headings
-// .elementor-widget-heading h1.elementor-heading-title {
-//   color: white;
-// }
-//
-// .elementor-widget-heading h2.elementor-heading-title {
-//   color: $yellow;
-// }
-//
-// .elementor-widget-heading h1.elementor-heading-title,
-// .elementor-widget-heading h2.elementor-heading-title {
-//   font-family: 'Londrina Solid', sans-serif;
-//   text-transform: uppercase;
-// }
-//
-// .elementor-widget-heading h3.elementor-heading-title {
-//   font-family: 'Press Start 2P', sans-serif;
-//   text-transform: uppercase;
-//   color: white;
-// }
-//
-// .purple .elementor-widget-heading {
-//   h3.elementor-heading-title {
-//     color: $purple;
-//   }
-// }
-//
-// .orange .elementor-widget-heading {
-//   h3.elementor-heading-title {
-//     color: $orange;
-//   }
-// }
-//
-// .yellow .elementor-widget-heading {
-//   h3.elementor-heading-title {
-//     color: $yellow;
-//   }
-// }
-// // buttons
-//
-// .elementor-widget-button .elementor-button,
-// .elementor-widget-button a.elementor-button {
-//   @extend .btn;
-// }
 // underline for menu items
 
 .e--pointer-double-line .elementor-item:after,
@@ -53,10 +9,40 @@
   background-color: $yellow;
 }
 // buttons
+// default button style (yellow)
 
-.elementor-button-wrapper .elementor-button {
-  border-radius: 2px;
+.ast-button,
+.button,
+.elementor-button-wrapper .elementor-button,
+button,
+input#submit,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
-  font-family: "Roboto Condensed", sans-serif;
+  border-radius: 2px;
   @include btn-outline($yellow);
+
+  &:active,
+  &:focus,
+  &:hover {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    border-radius: 2px;
+    @include btn-outline($yellow);
+  }
+}
+// colored button classes
+
+.purple-btn-outline {
+  .elementor-button-wrapper .elementor-button {
+    @include btn-outline($purple);
+  }
+}
+
+.orange-btn-outline {
+  .elementor-button-wrapper .elementor-button {
+    @include btn-outline($orange);
+  }
 }

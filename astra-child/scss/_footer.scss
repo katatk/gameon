@@ -1,5 +1,25 @@
-footer {
+.footer {
   h4 {
     font-family: 'Fjalla One', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .small {
+    font-size: 0.95rem;
+    color: #5F6267;
+    font-weight: 600;
+  }
+}
+
+.cta-banner {
+  padding: 7rem 0;
+
+  h3 {
+    color: $yellow;
   }
 }
