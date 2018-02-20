@@ -63,6 +63,57 @@ a {
 
 .card {
   .elementor-widget-wrap {
-    padding: 15px;
+    position: relative;
+    padding: 20px 32px 40px;
+  }
+  // fancy corner + diagonal opposite
+  &.top-right {
+    .elementor-widget-wrap {
+      @include fancy-corner('top-right', -10px, -10px, auto, auto);
+    }
+    // other two corners
+    .elementor-column-wrap {
+      @include cutout-corners(auto, auto, 0, 0);
+    }
+  }
+  // fancy corner + diagonal opposite
+  &.top-left {
+    .elementor-widget-wrap {
+      @include fancy-corner('top-left', -10px, auto, auto, -10px);
+    }
+    // other two corners
+    .elementor-column-wrap {
+      @include cutout-corners(auto, 0, 0, auto);
+    }
+  }
+  // fancy corner + diagonal opposite
+  &.bottom-right {
+    .elementor-widget-wrap {
+      @include fancy-corner('bottom-right', auto, -10px, -10px, auto);
+    }
+    // other two corners
+    .elementor-column-wrap {
+      @include cutout-corners(0, auto, auto, 0);
+    }
+  }
+  // fancy corner + diagonal opposite
+  &.bottom-left {
+    .elementor-widget-wrap {
+      @include fancy-corner('bottom-left', auto, auto, -10px, -10px);
+    }
+    // other two corners
+    .elementor-column-wrap {
+      @include cutout-corners(0, 0, auto, auto);
+    }
+  }
+
+  .elementor-heading-title {
+    margin-top: 35px;
+  }
+
+  &.purple-bg {
+    .elementor-heading-title {
+      color: $orange;
+    }
   }
 }
