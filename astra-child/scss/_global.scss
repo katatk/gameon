@@ -117,3 +117,16 @@ a {
     }
   }
 }
+// colored button classes
+
+.purple-btn-outline {
+  .elementor-button-wrapper .elementor-button {
+    @include btn-outline($purple);
+  }
+}
+
+.orange-btn-outline {
+  .elementor-button-wrapper .elementor-button {
+    @include btn-outline($orange);
+  }
+}

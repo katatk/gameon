@@ -33,16 +33,21 @@ input[type="reset"] {
     @include btn-outline($yellow);
   }
 }
-// colored button classes
+// nav menu
 
-.purple-btn-outline {
-  .elementor-button-wrapper .elementor-button {
-    @include btn-outline($purple);
+.sub-menu.elementor-nav-menu--dropdown {
+  background-color: $yellow;
+
+  a {
+    color: $purple;
   }
 }
 
-.orange-btn-outline {
-  .elementor-button-wrapper .elementor-button {
-    @include btn-outline($orange);
-  }
+.elementor-nav-menu--dropdown .elementor-item.highlighted,
+.elementor-nav-menu--dropdown .elementor-item:focus,
+.elementor-nav-menu--dropdown .elementor-item:hover,
+.elementor-sub-item.highlighted,
+.elementor-sub-item:focus,
+.elementor-sub-item:hover {
+  background-color: $light-yellow;
 }
