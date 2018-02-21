@@ -69,24 +69,25 @@
     content: none;
   }
 }
-// underline for cta banner
-@mixin underline($position, $color) {
+// underline for homepage card headings
+@mixin underline($color) {
   &::after {
     content: "";
     position: absolute;
-    top: 155%;
-    left: $position;
+    bottom: -10px;
+    left: 0;
     border-bottom: 2px solid $color;
-    width: 2%;
+    width: 22px;
   }
 }
-// underline for homepage card headings
-
-&::after {
-  content: "";
-  position: absolute;
-  top: 155%;
-  left: 0;
-  border-bottom: 2px solid $color;
-  width: 2%;
+// btn hover
+@mixin btn-hover($color) {
+  &:active,
+  &:focus,
+  &:hover {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    border-radius: 2px;
+    @include btn-outline($color);
+  }
 }

@@ -67,34 +67,17 @@ a {
   font-size: 0.85rem;
 }
 
-.purple {}
-
-.orange {
-  color: $orange;
-
-  &.underline h3 {
-    @include underline(0, $orange);
-  }
-}
-
-.yellow {
-  color: $yellow;
-
-  &.underline h3 {
-    @include underline(0, $yellow);
-  }
-}
-
 .orange-bg {
   background-color: $orange;
 
   .underline h3 {
     color: $purple;
-    @include underline(0, $purple);
+    @include underline($purple);
   }
 
   .elementor-button-wrapper .elementor-button {
     @include btn-outline($purple);
+    @include btn-hover($purple);
   }
 }
 
@@ -107,11 +90,12 @@ a {
 
   .underline h3 {
     color: $orange;
-    @include underline(0, $orange);
+    @include underline($orange);
   }
 
   .elementor-button-wrapper .elementor-button {
     @include btn-outline($orange);
+    @include btn-hover($orange);
   }
 }
 
@@ -120,11 +104,12 @@ a {
 
   .underline h3 {
     color: $purple;
-    @include underline(0, $purple);
+    @include underline($purple);
   }
 
   .elementor-button-wrapper .elementor-button {
     @include btn-outline($purple);
+    @include btn-hover($purple);
   }
 }
 
@@ -133,11 +118,12 @@ a {
 
   .underline h3 {
     color: $purple;
-    @include underline(0, $purple);
+    @include underline($purple);
   }
 
   .elementor-button-wrapper .elementor-button {
     @include btn-outline($purple);
+    @include btn-hover($purple);
   }
 }
 // colored 'cards'
@@ -229,8 +215,4 @@ a {
 
 .my-section.elementor-section {
   margin: 4rem 0;
-}
-
-.underline h3 {
-  @include underline(0, $yellow);
 }

@@ -1,3 +1,20 @@
+.cta-banner {
+  padding: 7rem 0;
+
+  h3 {
+    color: $yellow;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 155%;
+      left: 48.5%;
+      border-bottom: 2px solid $yellow;
+      width: 2%;
+    }
+  }
+}
+
 .footer {
   h4 {
     font-family: 'Fjalla One', sans-serif;
@@ -14,13 +31,11 @@
     color: #5F6267;
     font-weight: 600;
   }
-}
 
-.cta-banner {
-  padding: 7rem 0;
-
-  h3 {
-    color: $yellow;
-    @include underline(48.5%, $yellow);
+  .chase img {
+    position: absolute;
+    bottom: -59px;
+    right: 0;
+    margin-bottom: 0;
   }
 }
