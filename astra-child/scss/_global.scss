@@ -19,12 +19,23 @@ h1.press-elements-title {
   text-transform: uppercase;
   font-size: 4.5rem;
 }
+// apply extra padding to h1's that aren't on homepage
 
-h2,
-h2.elementor-heading-title {
-  color: $yellow;
-  font-family: 'Londrina Solid', regular;
-  text-transform: uppercase;
+.extra-padding h1.elementor-heading-title,
+h1.press-elements-title {
+  margin-bottom: 0.2rem;
+  margin-top: 7rem;
+}
+
+.elementor-widget-container {
+  h2,
+  h2.elementor-heading-title {
+    color: $yellow;
+    font-family: 'Londrina Solid', regular;
+    text-transform: uppercase;
+    padding-top: 4rem;
+    text-align: center;
+  }
 }
 
 h3,
@@ -39,6 +50,14 @@ h6 {
   }
 }
 
+.white {
+  h3 {
+    &.elementor-heading-title {
+      color: white;
+    }
+  }
+}
+
 a {
   color: $yellow;
 }
@@ -48,23 +67,85 @@ a {
   font-size: 0.85rem;
 }
 
-.purple {
-  color: $purple;
-}
+.purple {}
 
 .orange {
   color: $orange;
+
+  &.underline h3 {
+    @include underline(0, $orange);
+  }
 }
 
 .yellow {
   color: $yellow;
+
+  &.underline h3 {
+    @include underline(0, $yellow);
+  }
+}
+
+.orange-bg {
+  background-color: $orange;
+
+  .underline h3 {
+    color: $purple;
+    @include underline(0, $purple);
+  }
+
+  .elementor-button-wrapper .elementor-button {
+    @include btn-outline($purple);
+  }
+}
+
+.purple-bg {
+  background-color: $purple;
+
+  .elementor-heading-title {
+    color: $orange;
+  }
+
+  .underline h3 {
+    color: $orange;
+    @include underline(0, $orange);
+  }
+
+  .elementor-button-wrapper .elementor-button {
+    @include btn-outline($orange);
+  }
+}
+
+.yellow-bg {
+  background-color: $yellow;
+
+  .underline h3 {
+    color: $purple;
+    @include underline(0, $purple);
+  }
+
+  .elementor-button-wrapper .elementor-button {
+    @include btn-outline($purple);
+  }
+}
+
+.blue-bg {
+  background-color: $blue;
+
+  .underline h3 {
+    color: $purple;
+    @include underline(0, $purple);
+  }
+
+  .elementor-button-wrapper .elementor-button {
+    @include btn-outline($purple);
+  }
 }
 // colored 'cards'
 
 .card {
   .elementor-widget-wrap {
     position: relative;
-    padding: 20px 32px 40px;
+    padding: 20px 32px;
   }
   // fancy corner + diagonal opposite
   &.top-right {
@@ -106,27 +187,50 @@ a {
       @include cutout-corners(0, 0, auto, auto);
     }
   }
+  // cols inside a card class
+  .no-corners {
+    @include remove-corners;
+
+    .elementor-column-wrap {
+      @include remove-corners;
+    }
+
+    .elementor-widget-wrap {
+      @include remove-corners;
+    }
+  }
 
   .elementor-heading-title {
     margin-top: 35px;
   }
+}
 
-  &.purple-bg {
-    .elementor-heading-title {
-      color: $orange;
+.card-4-layout {
+  @media (min-width: 768px) {
+    .elementor-column.elementor-col-25,
+    .elementor-column[data-col="25"] {
+      width: 23.5%;
+      margin-right: 2%;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
-// colored button classes
 
-.purple-btn-outline {
-  .elementor-button-wrapper .elementor-button {
-    @include btn-outline($purple);
-  }
+.star-bg {
+  background: url("../img/star-background.png") no-repeat top center;
 }
 
-.orange-btn-outline {
-  .elementor-button-wrapper .elementor-button {
-    @include btn-outline($orange);
-  }
+.star-bg-fixed {
+  background: url("../img/star-background.png") fixed no-repeat top center;
+}
+
+.my-section.elementor-section {
+  margin: 4rem 0;
+}
+
+.underline h3 {
+  @include underline(0, $yellow);
 }

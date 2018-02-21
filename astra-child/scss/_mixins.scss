@@ -59,3 +59,34 @@
     display: inline-block;
   }
 }
+// for nested columns
+@mixin remove-corners {
+  &::after {
+    content: none;
+  }
+
+  &::before {
+    content: none;
+  }
+}
+// underline for cta banner
+@mixin underline($position, $color) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 155%;
+    left: $position;
+    border-bottom: 2px solid $color;
+    width: 2%;
+  }
+}
+// underline for homepage card headings
+
+&::after {
+  content: "";
+  position: absolute;
+  top: 155%;
+  left: 0;
+  border-bottom: 2px solid $color;
+  width: 2%;
+}
