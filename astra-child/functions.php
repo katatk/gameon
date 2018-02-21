@@ -27,8 +27,8 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 
 
 /* Enqueue scripts */
-function theme_js() {
-    wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/js/script.min.js' );
+function custom_js() {
+    wp_enqueue_script( 'custom_js', get_stylesheet_directory_uri() . '/js/script.min.js', array(), false, false );
 }
 
 add_action('wp_enqueue_scripts', 'custom_js');

@@ -76,7 +76,9 @@ a {
 }
 
 .orange-bg {
-  background-color: $orange;
+  .elementor-widget-wrap {
+    background-color: $orange;
+  }
 
   .underline h3 {
     color: $purple;
@@ -90,7 +92,9 @@ a {
 }
 
 .purple-bg {
-  background-color: $purple;
+  .elementor-widget-wrap {
+    background-color: $purple;
+  }
 
   .elementor-heading-title {
     color: $orange;
@@ -108,7 +112,9 @@ a {
 }
 
 .yellow-bg {
-  background-color: $yellow;
+  .elementor-widget-wrap {
+    background-color: $yellow;
+  }
 
   .underline h3 {
     color: $purple;
@@ -122,7 +128,9 @@ a {
 }
 
 .blue-bg {
-  background-color: $blue;
+  .elementor-widget-wrap {
+    background-color: $blue;
+  }
 
   .underline h3 {
     color: $purple;
@@ -136,91 +144,32 @@ a {
 }
 // colored 'cards'
 
-.card {
+.card,
+.card-square {
   .elementor-widget-wrap {
     position: relative;
     padding: 20px 32px 42px;
   }
-}
-
-.card-square {
-  .elementor-widget-wrap {
-    position: relative;
-    padding: 20px 32px;
-  }
-}
-
-.card,
-.card-square {
-  // fancy corner + diagonal opposite
-  &.top-right {
-    .elementor-widget-wrap {
-      @include fancy-corner('top-right', -10px, -10px, auto, auto);
-    }
-    // other two corners
-    .elementor-column-wrap {
-      @include cutout-corners(auto, auto, 0, 0);
-    }
-  }
-  // fancy corner + diagonal opposite
-  &.top-left {
-    .elementor-widget-wrap {
-      @include fancy-corner('top-left', -10px, auto, auto, -10px);
-    }
-    // other two corners
-    .elementor-column-wrap {
-      @include cutout-corners(auto, 0, 0, auto);
-    }
-  }
-  // fancy corner + diagonal opposite
-  &.bottom-right {
-    .elementor-widget-wrap {
-      @include fancy-corner('bottom-right', auto, -10px, -10px, auto);
-    }
-    // other two corners
-    .elementor-column-wrap {
-      @include cutout-corners(0, auto, auto, 0);
-    }
-  }
-  // fancy corner + diagonal opposite
-  &.bottom-left {
-    .elementor-widget-wrap {
-      @include fancy-corner('bottom-left', auto, auto, -10px, -10px);
-    }
-    // other two corners
-    .elementor-column-wrap {
-      @include cutout-corners(0, 0, auto, auto);
-    }
-  }
   // cols inside a card class
-  .no-corners {
-    @include remove-corners;
-
-    .elementor-column-wrap {
-      @include remove-corners;
-    }
-
-    .elementor-widget-wrap {
-      @include remove-corners;
-    }
-  }
-
+  // .no-corners {
+  //   @include remove-corners;
+  //
+  //   .elementor-column-wrap {
+  //     @include remove-corners;
+  //   }
+  //
+  //   .elementor-widget-wrap {
+  //     @include remove-corners;
+  //   }
+  // }
   .elementor-heading-title {
     margin-top: 35px;
   }
 }
 
-.card-4-layout {
-  @media (min-width: 768px) {
-    .elementor-column.elementor-col-25,
-    .elementor-column[data-col="25"] {
-      width: 23.5%;
-      margin-right: 2%;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
+.card-square {
+  .elementor-widget-wrap {
+    padding-bottom: 20px;
   }
 }
 
@@ -234,4 +183,80 @@ a {
 
 .my-section.elementor-section {
   margin: 4rem 0;
+}
+// corners
+
+.card,
+.square-card {
+  &.top-right {
+    .corner-top-right {
+      @include fancy-corner('top-right', 0, 0, auto, auto);
+    }
+
+    .corner-bottom-left {
+      @include diagonal-corner(0, 0, auto, auto);
+    }
+
+    .corner-top-left {
+      @include remaining-corner-1(0, 0, auto, auto);
+    }
+
+    .corner-bottom-right {
+      @include remaining-corner-2(0, 0, auto, auto);
+    }
+  }
+
+  &.top-left {
+    .corner-top-right {
+      @include remaining-corner-1(0, auto, auto, 0);
+    }
+
+    .corner-bottom-left {
+      @include remaining-corner-2(0, auto, auto, 0);
+    }
+
+    .corner-top-left {
+      @include fancy-corner('top-left', 0, auto, auto, 0);
+    }
+
+    .corner-bottom-right {
+      @include diagonal-corner(0, auto, auto, 0);
+    }
+  }
+
+  &.bottom-left {
+    .corner-top-right {
+      @include remaining-corner-1(auto, auto, 0, 0);
+    }
+
+    .corner-bottom-left {
+      @include fancy-corner('bottom-left', auto, auto, 0, 0);
+    }
+
+    .corner-top-left {
+      @include remaining-corner-2(auto, auto, 0, 0);
+    }
+
+    .corner-bottom-right {
+      @include diagonal-corner(auto, auto, 0, 0);
+    }
+  }
+
+  &.bottom-right {
+    .corner-top-right {
+      @include remaining-corner-1(auto, 0, 0, auto);
+    }
+
+    .corner-bottom-left {
+      @include diagonal-corner(auto, 0, 0, auto);
+    }
+
+    .corner-top-left {
+      @include remaining-corner-2(auto, 0, 0, auto);
+    }
+
+    .corner-bottom-right {
+      @include fancy-corner('bottom-right', auto, 0, 0, auto);
+    }
+  }
 }
