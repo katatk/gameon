@@ -22,7 +22,17 @@
   background-repeat: no-repeat, no-repeat;
   background-position: 48% 50%, 0 0;
 
+  .homepage-heading {
+    padding: 6rem 0;
+  }
+
   p {
     margin-bottom: 0;
   }
+}
+
+.buttons {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
 }

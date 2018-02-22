@@ -17,11 +17,10 @@ html {
 }
 /* 1. Don't set padding if an Elementor library item is embdedded within another section via shortcode */
 /* 2. Don't set padding if an Elementor library item is embdedded within a standard non-full width page */
-
-.elementor-top-section .elementor-top-section.elementor-section-boxed > .elementor-container,
-body:not(.full-width-content) .entry-content .elementor-top-section.elementor-section-boxed > .elementor-container {
-  padding: 0;
-}
+// .elementor-top-section .elementor-top-section.elementor-section-boxed > .elementor-container,
+// body:not(.full-width-content) .entry-content .elementor-top-section.elementor-section-boxed > .elementor-container {
+//   padding: 0;
+// }
 /* 3. Don't set padding if the section has a class of 'nopad' */
 
 .elementor-top-section.elementor-section-boxed.nopad > .elementor-container {

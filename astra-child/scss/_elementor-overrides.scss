@@ -42,6 +42,8 @@ input[type="reset"] {
     color: $purple;
   }
 }
+// menu
+// sub menu items
 
 .elementor-nav-menu--dropdown .elementor-item.highlighted,
 .elementor-nav-menu--dropdown .elementor-item:focus,
@@ -50,4 +52,24 @@ input[type="reset"] {
 .elementor-sub-item:focus,
 .elementor-sub-item:hover {
   background-color: $light-yellow;
+}
+// hamburger icon
+
+.elementor-menu-toggle.elementor-clickable {
+  color: white;
+}
+// mobile menu background
+
+.elementor-nav-menu--dropdown {
+  background-color: $yellow;
+
+  .menu-item a {
+    color: $purple;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $purple;
+    }
+  }
 }
