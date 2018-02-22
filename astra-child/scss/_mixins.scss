@@ -50,16 +50,6 @@
   left: $right;
   display: inline-block;
 }
-// for nested columns
-@mixin remove-corners {
-  &::after {
-    content: none;
-  }
-
-  &::before {
-    content: none;
-  }
-}
 // underline for homepage card headings
 @mixin underline($color) {
   &::after {
