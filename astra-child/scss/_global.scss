@@ -153,25 +153,6 @@ a {
     @include btn-hover($purple);
   }
 }
-// colored 'cards'
-
-.card,
-.card-square {
-  .elementor-widget-wrap {
-    position: relative;
-    padding: 20px 32px 42px;
-  }
-
-  h3.elementor-heading-title {
-    margin-top: 35px;
-  }
-}
-
-.card-square {
-  .elementor-widget-wrap {
-    padding-bottom: 20px;
-  }
-}
 
 .star-bg {
   &::after {
@@ -212,7 +193,7 @@ a {
     left: 0;
   }
 }
-
+// spacing classes
 .my-section.elementor-section {
   margin: 4rem 0;
 }
@@ -231,80 +212,4 @@ a {
 
 .mt-0 {
   margin-top: 0;
-}
-// corners
-
-.card,
-.square-card {
-  &.top-right {
-    .corner-top-right {
-      @include fancy-corner('top-right', 0, 0, auto, auto);
-    }
-
-    .corner-bottom-left {
-      @include diagonal-corner(0, 0, auto, auto);
-    }
-
-    .corner-top-left {
-      @include remaining-corner-1(0, 0, auto, auto);
-    }
-
-    .corner-bottom-right {
-      @include remaining-corner-2(0, 0, auto, auto);
-    }
-  }
-
-  &.top-left {
-    .corner-top-right {
-      @include remaining-corner-1(0, auto, auto, 0);
-    }
-
-    .corner-bottom-left {
-      @include remaining-corner-2(0, auto, auto, 0);
-    }
-
-    .corner-top-left {
-      @include fancy-corner('top-left', 0, auto, auto, 0);
-    }
-
-    .corner-bottom-right {
-      @include diagonal-corner(0, auto, auto, 0);
-    }
-  }
-
-  &.bottom-left {
-    .corner-top-right {
-      @include remaining-corner-1(auto, auto, 0, 0);
-    }
-
-    .corner-bottom-left {
-      @include fancy-corner('bottom-left', auto, auto, 0, 0);
-    }
-
-    .corner-top-left {
-      @include remaining-corner-2(auto, auto, 0, 0);
-    }
-
-    .corner-bottom-right {
-      @include diagonal-corner(auto, auto, 0, 0);
-    }
-  }
-
-  &.bottom-right {
-    .corner-top-right {
-      @include remaining-corner-1(auto, 0, 0, auto);
-    }
-
-    .corner-bottom-left {
-      @include diagonal-corner(auto, 0, 0, auto);
-    }
-
-    .corner-top-left {
-      @include remaining-corner-2(auto, 0, 0, auto);
-    }
-
-    .corner-bottom-right {
-      @include fancy-corner('bottom-right', auto, 0, 0, auto);
-    }
-  }
 }

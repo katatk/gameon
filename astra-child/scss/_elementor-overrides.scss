@@ -33,8 +33,11 @@ input[type="reset"] {
     @include btn-outline($yellow);
   }
 }
-// nav menu
 
+.elementor-button.elementor-size-sm {
+  padding: 8px 16px;
+}
+// nav menu
 .sub-menu.elementor-nav-menu--dropdown {
   background-color: $yellow;
 

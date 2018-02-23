@@ -1,6 +1,9 @@
 .logo img {
-  position: relative;
-  bottom: 15px;
+  position: static;
+  @media (min-width: 768px) {
+    position: relative;
+    bottom: 15px;
+  }
 }
 
 .menu-item a {
@@ -9,30 +12,68 @@
   font-size: 18px;
   font-family: 'Fjalla One', sans-serif;
 }
+// top bar - containing buttons and social icons
 
-.top-bar .elementor-button-text {
-  font-family: "Roboto Condensed", sans-serif;
+.top-bar {
+  .elementor-row {
+    display: flex;
+    justify-content: center;
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+    }
+
+    .elementor-social-icon:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  .elementor-button-text {
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  .elementor-column.elementor-col-25 {
+    width: auto;
+  }
 }
-// page title area
-
-.page-heading-container {
+// page title banner
+@mixin banner($img) {
   background-color: $purple-dark;
   /* fallback */
   background-image: url("../img/purple-stripe.png"), linear-gradient(135deg, $purple-dark 0, $purple-dark 50%, $purple 50%, $purple 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: 48% 50%, 0 0;
 
-  .homepage-heading {
+  .elementor-column-wrap {
+    background: none;
+    @media(min-width: 768px) {
+      background: url("../img/" + $img + ".png") no-repeat bottom right 10px;
+      background-size: 190px;
+    }
+    @media(min-width: 992px) {
+      background-size: auto;
+    }
+  }
+}
+
+.page-banner {
+  @include banner("buttons");
+}
+
+.homepage-banner {
+  @include banner("monkey-buttons");
+
+  .elementor-column-wrap {
+    background: none;
+    @media(min-width: 1335px) {
+      background-size: auto;
+    }
+  }
+
+  .homepage-heading .elementor-column-wrap.elementor-element-populated {
     padding: 6rem 0;
   }
 
   p {
     margin-bottom: 0;
   }
-}
-
-.buttons {
-  position: absolute;
-  right: 10px;
-  bottom: 0;
 }

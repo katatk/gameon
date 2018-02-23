@@ -21,6 +21,13 @@
 
   .contact-row {
     padding-bottom: 6rem;
+
+    .elementor-column:not(:last-child) {
+      margin-bottom: 4rem;
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .copyright-row {
