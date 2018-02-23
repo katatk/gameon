@@ -36,17 +36,22 @@
   }
 }
 // page title banner
-@mixin banner($img) {
+
+%banner {
   background-color: $purple-dark;
   /* fallback */
   background-image: url("../img/purple-stripe.png"), linear-gradient(135deg, $purple-dark 0, $purple-dark 50%, $purple 50%, $purple 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: 48% 50%, 0 0;
+}
+
+.page-banner {
+  @extend %banner;
 
   .elementor-column-wrap {
     background: none;
     @media(min-width: 768px) {
-      background: url("../img/" + $img + ".png") no-repeat bottom right 10px;
+      background: url("../img/buttons.png") no-repeat bottom right 10px;
       background-size: 190px;
     }
     @media(min-width: 992px) {
@@ -55,21 +60,22 @@
   }
 }
 
-.page-banner {
-  @include banner("buttons");
-}
-
 .homepage-banner {
-  @include banner("monkey-buttons");
+  @extend %banner;
 
   .elementor-column-wrap {
     background: none;
     @media(min-width: 1335px) {
+      background: url("../img/monkey-buttons.png") no-repeat bottom right 10px;
       background-size: auto;
     }
   }
 
   .homepage-heading .elementor-column-wrap.elementor-element-populated {
+    text-align: center;
+    @media (min-width: 1335px) {
+      text-align: left;
+    }
     padding: 6rem 0;
   }
 

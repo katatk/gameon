@@ -20,7 +20,10 @@
   padding-top: 3rem;
 
   .contact-row {
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
+    @media (min-width: 768px) {
+      padding-bottom: 6rem;
+    }
 
     .elementor-column:not(:last-child) {
       margin-bottom: 4rem;

@@ -92,3 +92,13 @@
     }
   }
 }
+
+.card-4-layout {
+  @media (min-width: 768px) {
+    // become 2 columns on mobile-tablet sizes
+    .elementor-column.elementor-col-25,
+    .elementor-column[data-col="25"] {
+      width: 50%;
+    }
+  }
+}
