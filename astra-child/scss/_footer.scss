@@ -1,17 +1,9 @@
 .cta-banner {
-  padding: 7rem 0;
+  padding: 102px 0;
 
   h3 {
     color: $yellow;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 155%;
-      left: 48.5%;
-      border-bottom: 2px solid $yellow;
-      width: 2%;
-    }
+    @include underline($yellow, 2%, 49%);
   }
 }
 
@@ -45,6 +37,7 @@
   }
 
   p {
+    font-size: 1rem;
     margin-bottom: 0;
   }
 

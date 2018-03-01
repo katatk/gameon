@@ -11,6 +11,16 @@
 // buttons
 // default button style (yellow)
 
+%btn-styles {
+  font-family: 'Fjalla One', sans-serif;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-size: 17px;
+}
+// .elementor-113 .elementor-element.elementor-element-56cbd67 .elementor-button,
+// .elementor-113 .elementor-element.elementor-element-56cbd67 a.elementor-button
+
 .ast-button,
 .button,
 .elementor-button-wrapper .elementor-button,
@@ -19,25 +29,26 @@ input#submit,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-  font-family: 'Roboto Condensed', sans-serif;
-  text-transform: uppercase;
-  border-radius: 2px;
+  @extend %btn-styles;
   @include btn-outline($yellow);
+}
 
-  &:active,
-  &:focus,
-  &:hover {
-    font-family: 'Roboto Condensed', sans-serif;
-    text-transform: uppercase;
-    border-radius: 2px;
-    @include btn-outline($yellow);
+.solid-btn {
+  .elementor-button-wrapper a.elementor-button,
+  button,
+  input#submit,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    @extend %btn-styles;
+    @include btn-solid($yellow);
   }
 }
-
-.elementor-button.elementor-size-sm {
-  padding: 8px 16px;
-}
+// .elementor-button.elementor-size-sm {
+//   padding: 8px 16px;
+// }
 // nav menu
+
 .sub-menu.elementor-nav-menu--dropdown {
   background-color: $yellow;
 
@@ -59,6 +70,12 @@ input[type="reset"] {
 // hamburger icon
 
 .elementor-menu-toggle.elementor-clickable {
+  position: absolute;
+  right: 0;
+  top: -80px;
+  @media (min-width: 768px) {
+    position: static;
+  }
   color: white;
 }
 // mobile menu background
@@ -75,4 +92,8 @@ input[type="reset"] {
       color: $purple;
     }
   }
+}
+
+.elementor-nav-menu--dropdown.elementor-nav-menu__container .elementor-sub-item {
+  font-size: 15px;
 }

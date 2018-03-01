@@ -1,8 +1,28 @@
 @mixin btn-outline($color) {
   color: $color;
-  border: 2px solid $color;
   background: transparent;
-  font-family: 'Fjalla One', sans-serif;
+  border: 2px solid $color;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: white;
+    background-color: $color;
+    border: 2px solid $color;
+  }
+}
+@mixin btn-solid($color) {
+  background: $color;
+  color: black;
+  border: 2px solid $color;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: white;
+    background-color: $color;
+    border: 2px solid $color;
+  }
 }
 // fancy corners
 @mixin fancy-corner($corner, $top, $right, $bottom, $left) {
@@ -51,24 +71,21 @@
   display: inline-block;
 }
 // underline for homepage card headings
-@mixin underline($color) {
+@mixin underline($color, $width, $left) {
   &::after {
     content: "";
     position: absolute;
     bottom: -10px;
-    left: 0;
+    left: $left;
     border-bottom: 2px solid $color;
-    width: 22px;
+    width: $width;
   }
 }
-// btn hover
+//btn hover
 @mixin btn-hover($color) {
   &:active,
   &:focus,
   &:hover {
-    font-family: 'Roboto Condensed', sans-serif;
-    text-transform: uppercase;
-    border-radius: 2px;
     @include btn-outline($color);
   }
 }

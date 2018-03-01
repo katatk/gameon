@@ -1,6 +1,10 @@
 .logo img {
   position: static;
+  text-align: left;
+  max-width: 200px;
+  width: 100%;
   @media (min-width: 768px) {
+    max-width: 299px;
     position: relative;
     bottom: 15px;
   }
@@ -15,6 +19,14 @@
 // top bar - containing buttons and social icons
 
 .top-bar {
+  // less padding on sm buttons so fit on one row for mobile {
+  .elementor-button.elementor-size-sm {
+    padding: 8px 10px;
+    @media (min-width: 768px) {
+      padding: 10px 20px;
+    }
+  }
+
   .elementor-row {
     display: flex;
     justify-content: center;
