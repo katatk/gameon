@@ -1,30 +1,13 @@
-%table-border {
-  border: 1px solid $purple;
-}
-
 table {
-  @extend %table-border;
+  border: none;
 
-  td {
-    color: $purple;
-    @extend %table-border;
+  td,
+  th {
+    color: #fff;
+    border: none;
   }
 
-  th,
   tr {
     padding: 10px;
-    @extend %table-border;
-  }
-}
-
-.opaque table {
-  tr {
-    &:nth-child(even) {
-      background-color: #fff;
-    }
-
-    &:nth-child(odd) {
-      background-color: darken(#fff, 10%);
-    }
   }
 }

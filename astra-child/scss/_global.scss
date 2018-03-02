@@ -58,15 +58,7 @@ h6 {
   &.elementor-heading-title {
     font-family: 'Press Start 2P', sans-serif;
     text-transform: uppercase;
-    color: $purple;
-  }
-}
-
-.white {
-  h3 {
-    &.elementor-heading-title {
-      color: white;
-    }
+    color: #fff;
   }
 }
 
@@ -93,7 +85,24 @@ a {
   color: $yellow;
 }
 
+%purple-links-headings {
+  a {
+    color: $purple;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    &.elementor-heading-title {
+      color: $purple;
+    }
+  }
+}
+
 .orange-bg {
+  @extend %purple-links-headings;
+
   .elementor-widget-wrap {
     background-color: $orange;
   }
@@ -110,6 +119,19 @@ a {
 }
 
 .purple-bg {
+  a {
+    color: $orange;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    &.elementor-heading-title {
+      color: $orange;
+    }
+  }
+
   .elementor-widget-wrap {
     background-color: $purple;
   }
@@ -130,6 +152,8 @@ a {
 }
 
 .yellow-bg {
+  @extend %purple-links-headings;
+
   .elementor-widget-wrap {
     background-color: $yellow;
   }
@@ -146,6 +170,8 @@ a {
 }
 
 .blue-bg {
+  @extend %purple-links-headings;
+
   .elementor-widget-wrap {
     background-color: $blue;
   }
