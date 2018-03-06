@@ -22,11 +22,6 @@
 <?php astra_head_bottom(); ?>
 <?php wp_head(); ?>
 
-<!-- custom scripts -->
-<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Londrina+Solid|Press+Start+2P|Roboto+Condensed:300,300i,400,400i" rel="stylesheet">
-<!--  custom scripts end -->
-
 </head>
 
 <body <?php astra_schema_body(); ?> <?php body_class(); ?>>

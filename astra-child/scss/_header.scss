@@ -60,25 +60,37 @@
 .page-banner {
   @extend %banner;
 
-  .elementor-column-wrap {
-    background: none;
-    @media(min-width: 768px) {
-      background: url("../img/buttons.png") no-repeat bottom right 10px;
-      background-size: 190px;
-    }
-    @media(min-width: 992px) {
-      background-size: auto;
+  .elementor-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .elementor-column {
+    width: auto;
+  }
+
+  .elementor-column-wrap img {
+    display: none;
+    @media(min-width: 1200px) {
+      display: inline-block;
+      position: relative;
+      bottom: -29px;
+      right: 0;
+      max-width: 500px;
     }
   }
 }
 
 .homepage-banner {
+  h1.elementor-heading-title {
+    margin: 0;
+  }
   @extend %banner;
 
   .elementor-column-wrap {
     background: none;
     @media(min-width: 1335px) {
-      background: url("../img/monkey-buttons.png") no-repeat bottom right 10px;
+      background: url("../img/banner-homepage.png") no-repeat bottom right 10px;
       background-size: auto;
     }
   }
