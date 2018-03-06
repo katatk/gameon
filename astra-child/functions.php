@@ -42,7 +42,7 @@ function child_theme_footer_script() {
     echo '<a href="#" id="back-to-top">
         <span class="fa-stack fa-lg">
           <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-angle-up fa-stack-1x fa-inverse"></i>
+          <i class="fa fa-angle-up fa-stack-1x"></i>
         </span>
     </a>';
  }

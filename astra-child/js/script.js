@@ -10,9 +10,9 @@ jQuery(document).ready(function($) {
   // show button when more than 50px from top
   $(window).scroll(function() {
     if ($(this).scrollTop() > 50) {
-      $('#back-to-top').fadeIn();
+      $('#back-to-top').addClass('visible');
     } else {
-      $('#back-to-top').fadeOut();
+      $('#back-to-top').removeClass('visible');
     }
   });
 
@@ -24,6 +24,9 @@ jQuery(document).ready(function($) {
     }, 800);
     return false;
   });
+
+  // add star background to entry-content
+  $('.entry-content').addClass("star-bg");
 
 
 });

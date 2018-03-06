@@ -1,12 +1,30 @@
 #back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    cursor: pointer;
-    display: none;
-    
-    .fa-square {
-        color: rgba(0,0,0,0.8);
-    }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  cursor: pointer;
+  visibility: 0;
+  opacity: 1;
+  transform: scaleX(0) scaleY(0);
+  transition: opacity 0.3s 0s, transform 0.5s 0s, visibility 0s 0.3s;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s 0s, transform 0.5s 0s;
+    transform: scaleX(1) scaleY(1);
+  }
+
+  .fa-square {
+    color: rgba($yellow, 0.75);
+  }
+
+  &:hover .fa-square {
+    color: $yellow;
+  }
+
+  .fa-angle-up {
+    color: #000;
+  }
 }
