@@ -1,0 +1,12 @@
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    cursor: pointer;
+    display: none;
+    
+    .fa-square {
+        color: rgba(0,0,0,0.8);
+    }
+}
