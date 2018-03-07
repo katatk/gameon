@@ -28,5 +28,38 @@ jQuery(document).ready(function($) {
   // add star background to entry-content
   $('.entry-content').addClass("star-bg");
 
+  // for sliders, calculate height of background image
+  var getBackgroundImageSize = function(el) {
+    var imageUrl = $(el).css('background-image').match(/^url\(["']?(.+?)["']?\)$/);
+    var dfd = new $.Deferred();
+
+    if (imageUrl) {
+      var image = new Image();
+      image.onload = dfd.resolve;
+      image.onerror = dfd.reject;
+      image.src = imageUrl[1];
+    } else {
+      dfd.reject();
+    }
+
+    return dfd.then(function() {
+      return {
+        width: this.width,
+        height: this.height
+      };
+    });
+  };
+
+  //
+  // Usage
+  //
+  getBackgroundImageSize(jQuery('#mydiv'))
+    .then(function(size) {
+      console.log('Image size is', size.width, size.height);
+    })
+    .fail(function() {
+      console.log('Could not get size because could not load image');
+    });
+
 
 });

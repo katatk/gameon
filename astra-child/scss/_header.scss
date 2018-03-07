@@ -84,6 +84,7 @@
 .homepage-banner {
   h1.elementor-heading-title {
     margin: 0;
+    line-height: 1;
   }
   @extend %banner;
 
@@ -105,5 +106,10 @@
 
   p {
     margin-bottom: 0;
+  }
+
+  .ps2p {
+    font-family: 'Press Start 2P';
+    font-size: 0.7rem;
   }
 }
