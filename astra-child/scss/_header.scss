@@ -13,8 +13,20 @@
 .menu-item a {
   color: #fff;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 14px;
   font-family: 'Fjalla One', sans-serif;
+  @media (min-width: 1200px) {
+    font-size: 18px;
+  }
+}
+
+.elementor-nav-menu--dropdown .menu-item a {
+  font-size: 18px;
+}
+//IE fix for menu centering
+
+.elementor-menu-toggle.elementor-clickable {
+  align-self: flex-end;
 }
 // top bar - containing buttons and social icons
 
