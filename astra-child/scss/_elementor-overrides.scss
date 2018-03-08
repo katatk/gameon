@@ -43,6 +43,20 @@ input[type="reset"] {
     @include btn-solid($yellow);
   }
 }
+// button fill animation
+@keyframes powerup {
+  0% {
+    top: 100%;
+  }
+
+  50% {
+    top: 50%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
 
 .power-up-btn {
   .elementor-button {
@@ -58,17 +72,14 @@ input[type="reset"] {
       right: 0;
       top: 100%;
       z-index: -1;
-      -webkit-transition: top 0.5s ease-in;
+      -webkit-transition: top 0.5s linear;
     }
 
     &:hover:before {
-      top: 0;
+      animation: powerup 1s forwards;
     }
   }
 }
-// .elementor-button.elementor-size-sm {
-//   padding: 8px 16px;
-// }
 // nav menu
 
 .sub-menu.elementor-nav-menu--dropdown {
