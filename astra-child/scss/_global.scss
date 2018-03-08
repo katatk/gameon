@@ -55,14 +55,16 @@ h1.press-elements-title {
   }
 }
 
+.elementor-slide-heading,
 h3,
 h3.elementor-heading-title {
-  font-size: 1rem;
+  // importants force slide heaidng to be smaller on mobile - elementor selector too specific and uses classes
+  font-size: 1rem !important;
   @media (min-width: 768px) {
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
   }
   @media (min-width: 1200px) {
-    font-size: 1.3rem;
+    font-size: 1.3rem !important;
   }
 }
 
