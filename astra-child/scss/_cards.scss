@@ -12,6 +12,17 @@
 }
 
 .card-square {
+  .elementor-column-wrap .elementor-widget-wrap .elementor-column-wrap .elementor-widget-wrap {
+    @media (max-width: 420px) {
+      padding: 0;
+    }
+  }
+
+  p:last-child {
+    @media(max-width: 767px) {
+      margin-bottom: 0;
+    }
+  }
   @extend .card;
 
   .elementor-widget-wrap {

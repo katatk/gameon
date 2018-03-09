@@ -26,15 +26,16 @@ h1.press-elements-title {
   font-family: 'Londrina Solid', regular;
   text-transform: uppercase;
   font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+  margin-top: 3rem;
   @media (min-width: 768px) {
+    margin-top: 7rem;
     font-size: 3.5rem;
   }
   @media (min-width: 1025px) {
     font-size: 4.5rem;
   }
-  line-height: 1.2;
-  margin-bottom: 0.2rem;
-  margin-top: 7rem;
 }
 
 .elementor-widget-container {
@@ -43,10 +44,11 @@ h1.press-elements-title {
     color: $yellow;
     font-family: 'Londrina Solid', regular;
     text-transform: uppercase;
-    padding-top: 4rem;
+    margin-top: 2rem;
     text-align: center;
     font-size: 2rem;
     @media (min-width: 768px) {
+      margin-top: 4rem;
       font-size: 2.3rem;
     }
     @media (min-width: 1025px) {

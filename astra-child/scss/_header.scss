@@ -110,10 +110,13 @@
 
   .homepage-heading .elementor-column-wrap.elementor-element-populated {
     text-align: center;
+    padding: 4rem 0;
+    @media (min-width: 768px) {
+      padding: 6rem 0;
+    }
     @media (min-width: 1335px) {
       text-align: left;
     }
-    padding: 6rem 0;
   }
 
   p {
