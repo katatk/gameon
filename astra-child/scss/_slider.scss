@@ -33,13 +33,16 @@
     }
   }
 }
+@media (min-width: 420px) {
+  .elementor-slick-slider {
+    .slick-next {
+      right: -50px;
+    }
 
-.elementor-slick-slider .slick-next {
-  right: -50px;
-}
-
-.elementor-slick-slider .slick-prev {
-  left: -50px;
+    .slick-prev {
+      left: -50px;
+    }
+  }
 }
 
 .slider {

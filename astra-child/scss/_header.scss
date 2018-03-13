@@ -21,7 +21,10 @@
 }
 
 .elementor-nav-menu--dropdown .menu-item a {
-  font-size: 18px;
+  font-size: 14px;
+  @media (min-width: 1200px) {
+    font-size: 18px;
+  }
 }
 //IE fix for menu centering
 
